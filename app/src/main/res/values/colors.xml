@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Registration and Login -->
+    <color name="registartion_field_stroke">#2Dffffff</color>
+    <color name="login_dark_mask">#99000000</color>
+    <color name="clubs_dark_mask">#BB000000</color>
+    <color name="registartion_error_field_stroke">#99ff0000</color>
+
+    <!-- Common -->
+    <color name="black_overlay">#66000000</color>
+    <color name="black">#000</color>
+    <color name="grey">#DFDFDF</color>
+    <color name="green">#0BE0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#0000</color>
+    <color name="green_reconti">#14942D</color>
+    <color name="green_reconti_login_with_alpha">#4510ff4f</color>
+    <color name="green_light_reconti">#1ABF34</color>
+    <color name="on_dark_background_text">#fff</color>
+    <color name="on_light_background_text">#000</color>
+    <color name="bright_background">#eee</color>
+    <color name="grey_background">#EBEEEC</color>
+    <color name="grey_dark_text">#4F4F4F</color>
+    <color name="grey_light_text">#434343</color>
+    <color name="grey_light_background">#F7F7F7</color>
+    <color name="basic_green_text">#30B65D</color>
+    <color name="reconti_facebook_color_with_alpha">#4557b6ff</color>
+    <!-- Switch Colors -->
+    <color name="switch_gray">#cecece</color>
+
+    <!-- Menu Colors -->
+    <color name="menu_background">#1f1f1f</color>
+    <color name="menu_1_color">#141414</color>
+    <color name="menu_2_color">#2b2b2b</color>
+
+    <!-- Diet -->
+    <color name="meal_list_grey_color">#F4F4F4</color>
+    <color name="meal_details_separator_color">#CECFCF</color>
+    <color name="meal_default_bottom_text_color">#888888</color>
+    <color name="meal_plus_background">#ebebeb</color>
+
+    <!-- Measurements -->
+
+    <color name="measurement_no_progress_color">#e46e0a</color>
+    <color name="measurement_neutral_color">#858585</color>
+    <color name="measurement_positive_color">#09bd14</color>
+    <color name="measurement_negative_color">#CECFCF</color>
+
+    <!-- DashboardLabels -->
+    <color name="measurement_yellow_color">#F6EC00</color>
+    <color name="measurement_green_color">#0BBC15</color>
+    <color name="measurement_red_color">#E40700</color>
+    <color name="measurement_darkred_color">#A00700</color>
+    <color name="measurement_orange_color">#E56E0A</color>
+    <color name="measurement_default_color">#858585</color>
+    <color name="measurement_default_bottom_text_color">#888888</color>
+    <color name="measurement_triangle_color">#888888</color>
+    <color name="measurement_bottom_bacground_label_color">#f2f2f2</color>
+    <color name="measurement_divider_cell">#e6e6e6</color>
+    <color name="measurement_background">#e6e6e6</color>
+    <color name="measurement_text_progress_positive_color">#39af65</color>
+    <color name="action_bar_color">#000</color>
+
+</resources>

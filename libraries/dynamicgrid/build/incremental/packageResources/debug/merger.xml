@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/home/bresiu/android-studio/android-workspace/Test/libraries/dynamicgrid/res" >
+            <file
+                path="/home/bresiu/android-studio/android-workspace/Test/libraries/dynamicgrid/res/values/id.xml"
+                qualifiers="" >
+                <item
+                    name="dynamic_grid_wobble_tag"
+                    type="id"/>
+            </file>
+        </source>
+        <source path="/home/bresiu/android-studio/android-workspace/Test/libraries/dynamicgrid/build/res/rs/debug" />
+        <source path="/home/bresiu/android-studio/android-workspace/Test/libraries/dynamicgrid/build/res/generated/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/bresiu/android-studio/android-workspace/Test/libraries/dynamicgrid/src/debug/res" />
+    </dataSet>
+
+</merger>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Test</string>
+
+    <!-- Common -->
+    <string name="common_language">en</string>
+    <string name="common_locale_ios">en_EN</string>
+    <string name="common_ok">OK</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_loading">Just a little while…</string>
+    <string name="common_loading_android">"Just a little while…"</string>
+    <string name="common_back">Back</string>
+    <string name="common_next">Next</string>
+    <string name="common_done">Done</string>
+    <string name="common_yes">YES</string>
+    <string name="common_no">NO</string>
+    <string name="common_alert">Alert</string>
+    <string name="common_confirm">Confirm</string>
+    <string name="common_send">Send</string>
+    <string name="common_skip">Skip</string>
+    <string name="common_info">Info</string>
+
+    <!-- Errors -->
+    <string name="alert_unsaved_changes">There are unsaved changes. Do you want to abandon them?</string>
+
+    <!-- Errors -->
+    <string name="error_unknown">Something went wrong …</string>
+    <string name="error_connection">Please, check your Internet connection.</string>
+    <string name="error_try_again_later">Sorry, but we could not perform this action. Please try again later.</string>
+    <string name="error_diet_code_21">As you can see, we present only three days of your diet. This is because we adapt it to your current surveys. Do not worry, you will continue to receive your diet in the coming days.</string>
+    <string name="error_diet_code_22">As you can see, we present only three days of your diet. This is because we adapt it to your current surveys. Do not worry, you will continue to receive your diet in the coming days.</string>
+    <string name="error_diet_code_23">Oops! Your diet will soon be over. Do not give up; you can still upgrade to Premium at www.reconti.com</string>
+    <string name="error_diet_code_24">Oops! Your diet will soon be over. Do not give up; you can still upgrade to Premium at www.reconti.com</string>
+    <string name="error_diet_code_25">Oops! Your diet is over. Do not worry, you can get back on the right path by going to www.reconti.com or revisiting your club.</string>
+    <string name="error_diet_code_26">Oops! Your diet is over. Do not worry, you can get back on the right path by going to www.reconti.com</string>
+    <string name="error_diet_code_27">Oops! You have to add a measurement to receive a diet.</string>
+    <string name="error_diet_code_offline">Some data may be outdated. Connect to the Internet to use the application.</string>
+    <string name="error_diet_code_default">Check your diet at www.reconti.com.</string>
+    <string name="error_login_code_2">Please update the application and keep working with reconti!</string>
+    <string name="error_login_code_11">Your account has not been activated. Please check your email.</string>
+    <string name="error_login_code_12">Username or password is not correct.</string>
+    <string name="error_login_code_13">Sorry, but this account doesn\'t exist. Please sign up.</string>
+    <string name="error_login_code_17">Please login using your email address.</string>
+    <string name="error_login_code_18">The account associated with this email address has been removed.</string>
+    <string name="error_login_code_default">Sorry, but we could not perform this acction. Please try again later.</string>
+    <string name="error_register_code_16">You already have an account. Log in and start working with reconti!</string>
+    <string name="error_register_code_default">Sorry, but we could not perform this acction. Please try again later.</string>
+    <string name="error_validate_all">Please fill in all fields.</string>
+    <string name="error_login_enter_password">Please enter your password to log in.</string>
+    <string name="error_signup_invalid_email_format">Incorrect email address format.</string>
+    <string name="error_signup_password_min_length_error">Password must have at least six characters.</string>
+    <string name="error_signup_password_must_be_the_same_error">Passwords must be identical.</string>
+    <string name="error_login_signup_email_already_exist">This email is already registered.</string>
+    <string name="error_signup_height_msg">Please enter your height.</string>
+    <string name="error_signup_weight_msg">Please enter your weight.</string>
+    <string name="error_signup_birthday_msg">Please enter your birthday.</string>
+    <string name="error_login_username_password_incorect">Username or password is incorrect.</string>
+    <string name="error_sign_up_privacy_policy">Please read and accept the privacy policy.</string>
+    <string name="error_sign_up_user_conditions">Please read and accept the terms and conditions of use.</string>
+    <string name="error_measurement_dashboard_no_first_measure"></string>
+    <string name="error_fetching_data"></string>
+    <string name="error_on_survey_download_no_survey"></string>
+    <string name="error_signup_exisiting_login">You already have an account. Log in and start working with reconti!</string>
+    <string name="error_login_screen_timeout">Please try again later …</string>
+
+    <!-- Views -->
+    <string name="view_surveys">Surveys</string>
+    <string name="view_surveys_add_category">Add category</string>
+    <string name="view_surveys_charts">Charts</string>
+    <string name="view_surveys_history">History</string>
+    <string name="view_activities">Activities</string>
+    <string name="view_activities_add">Add</string>
+    <string name="view_activities_history">History</string>
+    <string name="view_activities_edit_details">Details</string>
+    <string name="view_diet">Diet</string>
+    <string name="view_profile">Profile</string>
+    <string name="view_premium">Premium</string>
+    <string name="view_clubs">Clubs</string>
+    <string name="view_clubs_suggest">Suggest club</string>
+    <string name="view_change_password">Change password</string>
+    <string name="view_meal">Recipe</string>
+    <string name="view_terms">Terms</string>
+    <string name="view_policy">Policy</string>
+    <string name="view_plans">Plans</string>
+    <string name="view_shop">Shop</string>
+    <string name="view_settings">Settings</string>
+    <string name="view_applications">Your apps</string>
+    <string name="view_logout">Log out</string>
+    <string name="view_diet_preferences">Diet preferences</string>
+
+    <!-- Dates -->
+    <string name="date_week">week</string>
+    <string name="date_month">month</string>
+    <string name="date_year">year</string>
+    <string name="date_today">Today</string>
+    <string name="date_yesterday">Yesterday</string>
+    <string name="date_tomorrow">Tomorrow</string>
+    <string name="date_after_tomorrow">Day after tomorrow</string>
+    <string name="date_days_ago">days ago</string>
+    <string name="date_monday">Monday</string>
+    <string name="date_tuesday">Tuesday</string>
+    <string name="date_wednesday">Wednesday</string>
+    <string name="date_thursday">Thursday</string>
+    <string name="date_friday">Friday</string>
+    <string name="date_saturday">Saturday</string>
+    <string name="date_sunday">Sunday</string>
+
+    <!-- Surveys -->
+    <string name="survey_bmi">BMI</string>
+    <string name="survey_weight">Weight</string>
+    <string name="survey_fat">Fat</string>
+    <string name="survey_water">Water</string>
+    <string name="survey_waist">Waist</string>
+    <string name="survey_whr">WHR</string>
+    <string name="survey_hips">Hips</string>
+    <string name="survey_add_weight">Weight</string>
+    <string name="survey_add_fat">% fat</string>
+    <string name="survey_add_waist">Waist</string>
+    <string name="survey_add_hips">Hips</string>
+    <string name="survey_add_water">% water</string>
+    <string name="survey_unit_kg">kg</string>
+    <string name="survey_unit_cm">cm</string>
+    <string name="survey_unit_percent">%</string>
+    <string name="survey_target">goal</string>
+    <string name="survey_progress">progress</string>
+    <string name="survey_survey">measurement</string>
+    <string name="survey_add_category">Add category</string>
+    <string name="survey_dash">"–"</string>
+    <string name="survey_plus">"+"</string>
+    <string name="survey_triangle_up">"▲"</string>
+    <string name="survey_traingle_neutral">"▶"</string>
+    <string name="survey_triangle_down">"▼"</string>
+    <string name="survey_up">up</string>
+    <string name="survey_down">down</string>
+    <string name="survey_bmi_description">We calculate your Body Mass Index by dividing your weight by the square of your height. The correct BMI range is between 18.5 and 25. A BMI under 18.5 means you are underweight; above 25 means you are overweight or obese.</string>
+    <string name="survey_whr_description">We calculate your Waist–Hip Ratio by dividing your waist measurement by your hip measurement. This ratio determines your body type – a WHR above 0.8 (women) or 1.0 (men) means that your body is apple-shaped; below these values, your body is pear-shaped.</string>
+    <string name="survey_target_not_available">Setting a goal for this survey is not available.</string>
+    <string name="survey_change_target">Change goal</string>
+    <string name="survey_no_surveys">There are no surveys to display.</string>
+
+    <!-- Activities -->
+    <string name="activ_basketball">basketball</string>
+    <string name="activ_bike">bike</string>
+    <string name="activ_canoeing">canoeing</string>
+    <string name="activ_cardio">cardio</string>
+    <string name="activ_climb">climb</string>
+    <string name="activ_cross_sking">cross skiing</string>
+    <string name="activ_cross_train">cross train</string>
+    <string name="activ_dance">dance</string>
+    <string name="activ_elliptical">elliptical</string>
+    <string name="activ_fight">martial arts</string>
+    <string name="activ_hike">hike</string>
+    <string name="activ_pilates">pilates</string>
+    <string name="activ_rowing">rowing</string>
+    <string name="activ_run">run</string>
+    <string name="activ_skate">skate</string>
+    <string name="activ_skating">ice skate</string>
+    <string name="activ_ski">skiing</string>
+    <string name="activ_snowboard">snowboard</string>
+    <string name="activ_soccer">soccer</string>
+    <string name="activ_squash">squash</string>
+    <string name="activ_stationary">stationary</string>
+    <string name="activ_only_steps">steps</string>
+    <string name="activ_swim">swim</string>
+    <string name="activ_tennis">tennis</string>
+    <string name="activ_volleyball">volleyball</string>
+    <string name="activ_walk">walk</string>
+    <string name="activ_weights">weights</string>
+    <string name="activ_yoga">yoga</string>
+    <string name="activ_zumba">zumba®</string>
+    <string name="activ_other">other</string>
+    <string name="activ_duration">duration</string>
+    <string name="activ_distance">distance</string>
+    <string name="activ_calories">calories</string>
+    <string name="activ_label_date">Date</string>
+    <string name="activ_label_start_time">Start time</string>
+    <string name="activ_label_duration">Duration</string>
+    <string name="activ_label_more">more</string>
+    <string name="activ_label_add_activity">Add activity</string>
+    <string name="activ_label_distance">Distance</string>
+    <string name="activ_label_burn_calories">Burned calories</string>
+    <string name="activ_label_steps">Number of steps</string>
+    <string name="activ_label_pace">Pace</string>
+
+    <!-- Profile -->
+    <string name="profile_pick_from_camera">Pick avatar from camera</string>
+    <string name="profile_pick_from_gallery">Pick avatar from gallery</string>
+    <string name="profile_pick_from_facebook">Download from facebook</string>
+    <string name="profile_dont_have_account">Don\'t have an account?</string>
+    <string name="profile_name">Name</string>
+    <string name="profile_surname">Last Name</string>
+    <string name="profile_email">E-mail</string>
+    <string name="profile_phone">Phone number</string>
+    <string name="profile_birthday">Birthday</string>
+    <string name="profile_height">Height</string>
+    <string name="profile_save">Save changes</string>
+    <string name="profile_gender_man">Man</string>
+    <string name="profile_gender_woman">Woman</string>
+    <string name="profile_noname">No name</string>
+
+    <!-- Diet -->
+    <string name="diet_breakfast">Breakfast</string>
+    <string name="diet_second_breakfast">Second breakfast</string>
+    <string name="diet_lunch">Lunch</string>
+    <string name="diet_snack">Snack</string>
+    <string name="diet_dinner">Dinner</string>
+    <string name="diet_diet">diet</string>
+    <string name="diet_your_diet">your diet</string>
+    <string name="diet_plan_fat_loss">Reducing</string>
+    <string name="diet_plan_be_fit">Be fit</string>
+    <string name="diet_plan_weight_gain">Weight gain</string>
+    <string name="diet_be_fit_response">be_fit</string>
+    <string name="diet_fat_loss_response">fat_loss</string>
+    <string name="diet_weight_gain_response">weight_gain</string>
+    <string name="diet_plan_description">Your diet is prepared based on your surveys and activities. Enter it regulary to make it perfectly fitted to you.</string>
+    <string name="diet_button_preferences">Preferences</string>
+    <string name="diet_preferences_disease">diseases</string>
+    <string name="diet_preferences_diabetes">diabetes</string>
+    <string name="diet_preferences_preference">preferences</string>
+    <string name="diet_preferences_vege">vegetarian</string>
+    <string name="diet_is_being_prepared">Your diet is being prepared</string>
+
+    <!-- Meal -->
+    <string name="meal_portions">portions</string>
+    <string name="meal_energy_per_person">kcal/pp</string>
+    <string name="meal_nutrients">nutrients</string>
+    <string name="meal_ingredients">ingredients</string>
+    <string name="meal_recipe_steps">recipe steps</string>
+    <string name="meal_add_listonic">Add to Listonic</string>
+
+    <!-- Clubs -->
+    <string name="clubs_empty_club_list">Our ambition is to support everyone who needs our help. Help us improve reconti.</string>
+    <string name="clubs_propose_club">Suggest club</string>
+    <string name="clubs_choose_club_name">Club name</string>
+    <string name="clubs_choose_club_city">City</string>
+    <string name="clubs_choose_club_address">Address</string>
+    <string name="clubs_send_club_proposal">Send your suggestion</string>
+    <string name="clubs_send_club_request_title">Where do you think we should appear?</string>
+    <string name="clubs_send_proposal_success">Thank you for help</string>
+
+    <!-- Apps -->
+    <string name="apps_sync">Sync with trackers</string>
+    <string name="apps_social">Social apps</string>
+
+    <!-- Log in / Sign In -->
+    <string name="log_in_name_hint">Name</string>
+    <string name="log_in_surname_hint">Last name</string>
+    <string name="log_in_birthday_hint">Birthday</string>
+    <string name="log_in_weight_hint">Weight</string>
+    <string name="log_in_height_hint">Height</string>
+    <string name="log_in_date_spinner">DD-MM-YYYY</string>
+    <string name="log_in_password">Password</string>
+    <string name="log_in_password_confirm">Repeat password</string>
+    <string name="log_in_email">E-mail</string>
+    <string name="log_in_please_wait">Please wait…</string>
+    <string name="log_in_log_in">Log in</string>
+    <string name="log_in_forgot_your_password">forgot password</string>
+    <string name="log_in_sign_up">Sign up</string>
+    <string name="log_in_exit_attempt">Press back button once again to exit</string>
+    <string name="log_in_remind_password_check_mailbox">Okay, please check your e-mail.</string>
+    <string name="log_in_remind_password_does_not_exist">There is no account with these e-mail.</string>
+    <string name="log_in_via_facebook">Log in via facebook</string>
+    <string name="log_in_sign_up_via_facebook">Sign up via facebook</string>
+    <string name="log_in_terms_accept">I accept</string>
+    <string name="log_in_terms_link">terms of use</string>
+    <string name="log_in_policy_accept">I agree for processing my personal data…</string>
+    <string name="log_in_policy_link">read more</string>
+    <string name="log_in_enter_email">Please, enter your email.</string>
+
+    <!-- Change Password -->
+    <string name="change_password_old_password">Old password</string>
+    <string name="change_password_password">Password</string>
+    <string name="change_password_confirm_password">Confirm password</string>
+    <string name="change_password_change_ok">Your password has been changed</string>
+    <string name="change_password_change_fail">We were not able to change your password</string>
+
+    <!-- quantity -->
+    <string name="quantity_any"></string>
+    <string name="quantity_piece">piece</string>
+    <string name="quantity_gram">gram</string>
+    <string name="quantity_dec">dec</string>
+    <string name="quantity_kg">kg</string>
+    <string name="quantity_tblspoon">table spoon</string>
+    <string name="quantity_teaspoon">teaspoon</string>
+    <string name="quantity_cup">cup</string>
+    <string name="quantity_glass">glass</string>
+    <string name="quantity_clove">clove</string>
+    <string name="quantity_pinch">pinch</string>
+    <string name="quantity_ml">ml</string>
+    <string name="quantity_liter">liter</string>
+    <string name="quantity_can">can</string>
+    <string name="quantity_slice">slice</string>
+
+    <!-- logout -->
+    <string name="logout_goodbye">Goodbye!</string>
+    <string name="logout_login_again">Log in again</string>
+
+    <!-- tutorial -->
+    <string name="tutorial_welcome">Welcome to reconti! For the beginning, we have some tips for you.</string>
+    <string name="tutorial_tip_one">Add your surveys anytime you want.</string>
+    <string name="tutorial_tip_two">Add new survey categories and build your story.</string>
+    <string name="tutorial_page_tree_description">Add your surveys regulary and see your progress so we can predict your future trends based on it.</string>
+    <string name="tutorial_page_four_description">Regular surveys are also the basis of your nutritional plan. The more often you add them, the better matched diet you get.</string>
+
+    <!-- plans -->
+    <string name="plan_premium_description"></string>
+    <string name="plan_free_description"></string>
+    <string name="plan_basic_description"></string>
+
+    <!-- shop -->
+    <string name="shop_nothing_available">Products not available</string>
+
+    <!-- Android only -->
+
+    <!-- Pull To Refresh -->
+    <string name="ptr_pull_to_refresh">Pull to refresh</string>
+    <string name="ptr_release_to_refresh">Release to refresh</string>
+    <string name="ptr_refreshing">"Refreshing…"</string>
+    <string name="ptr_loading">"Loading…"</string>
+    <string name="ptr_last_updated">"Last update: "</string>
+
+    <!-- Temp -->
+    <string name="clothes_type_none">none</string>
+    <string name="clothes_type_light">light</string>
+    <string name="clothes_type_medium">medium</string>
+    <string name="clothes_type_heavy">heavy</string>
+    <string name="clothes_type">clothes type</string>
+
+
+</resources>
