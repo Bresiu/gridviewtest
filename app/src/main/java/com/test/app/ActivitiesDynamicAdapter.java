@@ -1,13 +1,13 @@
 package com.test.app;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import org.askerov.dynamicgid.BaseDynamicGridAdapter;
 
@@ -15,8 +15,11 @@ import java.util.List;
 
 public class ActivitiesDynamicAdapter extends BaseDynamicGridAdapter {
 
+    private Context context;
+
     public ActivitiesDynamicAdapter(Context context, List<?> items, int columnCount) {
         super(context, items, columnCount);
+        this.context = context;
     }
 
     @Override
@@ -31,15 +34,9 @@ public class ActivitiesDynamicAdapter extends BaseDynamicGridAdapter {
         }
         holder.build(getItem(position).toString());
 
+        holder.position = position;
+
         return convertView;
-    }
-
-    private Bitmap getBitmapFromView(View v) {
-        Bitmap bitmap = Bitmap.createBitmap(v.getWidth(), v.getHeight(), Bitmap.Config.ARGB_8888);
-
-        Canvas canvas = new Canvas(bitmap);
-        v.draw(canvas);
-        return bitmap;
     }
 
     @Override
@@ -53,6 +50,7 @@ public class ActivitiesDynamicAdapter extends BaseDynamicGridAdapter {
     }
 
     private class ViewHolder {
+        public int position;
         private TextView titleText;
         private ImageView image;
 
@@ -63,7 +61,7 @@ public class ActivitiesDynamicAdapter extends BaseDynamicGridAdapter {
 
         void build(String title) {
             titleText.setText(Activities.activitiesNameIntMap.get(title));
-            image.setImageResource(Activities.activitiesIconIntMap.get(title));
+            Picasso.with(context).load(Activities.activitiesIconIntMap.get(title)).into(image);
         }
     }
 }
