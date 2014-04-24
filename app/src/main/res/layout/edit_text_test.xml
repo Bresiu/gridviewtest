@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:floatlabel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.test.app.FloatLabelLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/edit_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/log_in_name_hint"
+            android:imeOptions="actionNext"
+            android:inputType="textNoSuggestions"
+            android:nextFocusDown="@+id/edit_password"
+            android:singleLine="true"
+            android:textColor="@color/green_reconti_login_with_alpha" />
+
+    </com.test.app.FloatLabelLayout>
+
+    <com.test.app.FloatLabelLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/selector"
+        app:floatLabelTextAppearance="@style/FloatLabel">
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/log_in_password"
+            android:imeOptions="actionDone"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"
+            android:textColor="@color/selector" />
+
+    </com.test.app.FloatLabelLayout>
+
+    <com.micromobs.android.floatlabel.FloatLabelEditText
+        android:id="@+id/float_label_text_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/layout_bg"
+        android:padding="10dp"
+
+        floatlabel:LabelTextSize="14sp"
+        floatlabel:fitScreenWidth="full"
+        floatlabel:hint="Fit Width (full) Example"
+        floatlabel:text="Small txt"
+        floatlabel:textColorHintFocused="@color/green_reconti"
+        floatlabel:textColorHintUnFocused="@color/measurement_red_color" />
+
+</LinearLayout>

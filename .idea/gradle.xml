@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/libraries" />
             <option value="$PROJECT_DIR$/libraries/dynamicgrid" />
+            <option value="$PROJECT_DIR$/libraries/floatLabel" />
           </set>
         </option>
       </GradleProjectSettings>

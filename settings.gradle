@@ -1,1 +1,1 @@
-include ':app', ':libraries:dynamicgrid'
+include ':app', ':libraries:dynamicgrid', ':libraries:floatLabel'
