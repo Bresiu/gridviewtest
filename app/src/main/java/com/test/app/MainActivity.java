@@ -17,8 +17,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_text_test);
-        FloatLabelLayout floatLabelLayout = (FloatLabelLayout) findViewById(R.id.fl);
-        floatLabelLayout.getLabel().setTextColor(getResources().getColorStateList(R.color.selector));
         /*
         setContentView(R.layout.activity_main);
         gridView = (DynamicGridView) findViewById(R.id.dynamic_grid);

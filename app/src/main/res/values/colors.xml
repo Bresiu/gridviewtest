@@ -7,6 +7,7 @@
     <color name="registartion_error_field_stroke">#99ff0000</color>
 
     <!-- Common -->
+    <color name="gray_overlay">#30000000</color>
     <color name="black_overlay">#66000000</color>
     <color name="black">#000</color>
     <color name="grey">#DFDFDF</color>
@@ -25,8 +26,18 @@
     <color name="grey_light_background">#F7F7F7</color>
     <color name="basic_green_text">#30B65D</color>
     <color name="reconti_facebook_color_with_alpha">#4557b6ff</color>
+
+    <!-- Layout common Colors -->
+    <color name="divider_strip_color">#F4F4F4</color>
+
     <!-- Switch Colors -->
     <color name="switch_gray">#cecece</color>
+
+    <!-- Profile Colors -->
+    <color name="profile_hint_text_color">#969696</color>
+    <color name="stroke_color">#e6e6e6</color>
+    <color name="profile_text_color">#3c3c3c</color>
+    <color name="change_password_error_stroke">#E40700</color>
 
     <!-- Menu Colors -->
     <color name="menu_background">#1f1f1f</color>
@@ -34,13 +45,11 @@
     <color name="menu_2_color">#2b2b2b</color>
 
     <!-- Diet -->
-    <color name="meal_list_grey_color">#F4F4F4</color>
     <color name="meal_details_separator_color">#CECFCF</color>
     <color name="meal_default_bottom_text_color">#888888</color>
     <color name="meal_plus_background">#ebebeb</color>
 
     <!-- Measurements -->
-
     <color name="measurement_no_progress_color">#e46e0a</color>
     <color name="measurement_neutral_color">#858585</color>
     <color name="measurement_positive_color">#09bd14</color>
@@ -48,7 +57,7 @@
 
     <!-- DashboardLabels -->
     <color name="measurement_yellow_color">#F6EC00</color>
-    <color name="measurement_green_color">#0BBC15</color>
+    <color name="measurement_green_color">#30b65d</color>
     <color name="measurement_red_color">#E40700</color>
     <color name="measurement_darkred_color">#A00700</color>
     <color name="measurement_orange_color">#E56E0A</color>

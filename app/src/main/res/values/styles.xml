@@ -5,8 +5,30 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="FloatLabel">
+    <style name="FloatLabel" parent="android:TextAppearance.Small">
         <item name="android:textColor">@color/selector</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="profile_float_label">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:background">@drawable/layout_bg</item>
+    </style>
+
+    <style name="profile_edittext_fields" parent="android:Widget.EditText">
+        <item name="android:padding">6dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:textColor">@color/profile_text_color</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:inputType">textCapWords</item>
     </style>
 
 </resources>

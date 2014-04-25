@@ -1,6 +1,8 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="@color/black" android:state_pressed="true" />
-    <item android:color="@color/measurement_red_color" android:state_focused="true" />
-    <item android:color="@color/white" android:state_selected="true" />
-    <item android:color="@color/green_reconti" android:state_selected="false" />
+
+    <!-- The color when activated/focused (usually your app's accent color) -->
+    <item android:color="@color/green_reconti" android:state_activated="true" />
+    <!-- The color when not activated/focused (usually grey) -->
+    <item android:color="@color/meal_default_bottom_text_color" />
+
 </selector>
