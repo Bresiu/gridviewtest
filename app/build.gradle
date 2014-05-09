@@ -22,5 +22,6 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':libraries:dynamicgrid')
     compile project(':libraries:floatLabel')
+    compile project(':libraries:pullToRefresh')
     compile files('libs/picasso-2.2.0.jar')
 }

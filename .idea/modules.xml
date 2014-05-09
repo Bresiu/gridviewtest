@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/dynamicgrid/dynamicgrid.iml" filepath="$PROJECT_DIR$/libraries/dynamicgrid/dynamicgrid.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/floatLabel/floatLabel.iml" filepath="$PROJECT_DIR$/libraries/floatLabel/floatLabel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/pullToRefresh/pullToRefresh.iml" filepath="$PROJECT_DIR$/libraries/pullToRefresh/pullToRefresh.iml" />
     </modules>
   </component>
 </project>

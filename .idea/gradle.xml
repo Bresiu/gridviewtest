@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/libraries" />
             <option value="$PROJECT_DIR$/libraries/dynamicgrid" />
             <option value="$PROJECT_DIR$/libraries/floatLabel" />
+            <option value="$PROJECT_DIR$/libraries/pullToRefresh" />
           </set>
         </option>
       </GradleProjectSettings>
