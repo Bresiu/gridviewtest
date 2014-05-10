@@ -17,10 +17,8 @@ public class ListAdapter extends BaseAdapter {
 
     private ArrayList arrayList;
     private LayoutInflater layoutInflater;
-    private Context context;
 
     public ListAdapter(Context context, ArrayList arrayList) {
-        this.context = context;
         this.arrayList = arrayList;
         layoutInflater = LayoutInflater.from(context);
     }
@@ -59,8 +57,6 @@ public class ListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        //ItemViewHolder itemViewHolder = null;
-        //DividerViewHolder dividerViewHolder = null;
 
         final int type = getItemViewType(position);
 
@@ -80,56 +76,6 @@ public class ListAdapter extends BaseAdapter {
         }
 
         return convertView;
-
-
-
-        /*
-        // First, let's create a new convertView if needed. You can also
-        // create a ViewHolder to speed up changes if you want ;)
-        if (convertView == null) {
-            if (type == ITEM_VIEW_TYPE_DIVIDER) {
-                convertView = layoutInflater.inflate(R.layout.divider, parent, false);
-                dividerViewHolder = new DividerViewHolder();
-                dividerViewHolder.divider = (TextView) convertView.findViewById(R.id.divider);
-                convertView.setTag(dividerViewHolder);
-            } else {
-                convertView = layoutInflater.inflate(R.layout.row, parent, false);
-                itemViewHolder = new ItemViewHolder();
-                itemViewHolder.name = (TextView) convertView.findViewById(R.id.name);
-                itemViewHolder.surname = (TextView) convertView.findViewById(R.id.surname);
-                convertView.setTag(itemViewHolder);
-            }
-        } else {
-            if (type == ITEM_VIEW_TYPE_DIVIDER) {
-                dividerViewHolder = (DividerViewHolder) convertView.getTag();
-            } else {
-                itemViewHolder = (ItemViewHolder) convertView.getTag();
-            }
-        }
-
-        // We can now fill the list item view with the appropriate data.
-        if (type == ITEM_VIEW_TYPE_DIVIDER) {
-            final Divider divider = (Divider) getItem(position);
-            dividerViewHolder.divider.setText(divider.getNumber());
-        } else {
-            final Item item = (Item) getItem(position);
-            itemViewHolder.name.setText(item.getName());
-            itemViewHolder.surname.setText(item.getSurname());
-        }
-        */
-
-        // return convertView;
     }
-
-    /*
-    private class ItemViewHolder {
-        public TextView name;
-        public TextView surname;
-    }
-
-    private class DividerViewHolder {
-        public TextView divider;
-    }
-    */
 
 }
