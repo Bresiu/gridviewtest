@@ -23,5 +23,6 @@ dependencies {
     compile project(':libraries:dynamicgrid')
     compile project(':libraries:floatLabel')
     compile project(':libraries:pullToRefresh')
+    compile project(':libraries:timesSquare')
     compile files('libs/picasso-2.2.0.jar')
 }
