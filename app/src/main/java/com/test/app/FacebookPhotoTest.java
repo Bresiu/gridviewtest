@@ -3,8 +3,8 @@ package com.test.app;
 import android.app.Fragment;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -21,27 +22,27 @@ import java.io.File;
 import java.io.FileOutputStream;
 
 public class FacebookPhotoTest extends Fragment {
+    private static final String FACEBOOK_GRAPH_URL_START = "https://graph.facebook.com/";
+    private static final String FACEBOOK_USER_ID = "100004473465451";
+    private static final String FACEBOOK_GRAPH_URL_END = "/picture?height=";
+    private static final int FACEBOOK_USER_PHOTO_SIZE = 100;
+    private static final String FACEBOOK_PHOTO_NAME = "fbUserPhoto";
     Context context;
-
     ImageView imageView;
     ProgressBar progressBar;
-
-    String currentUrl = "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/t1.0-1/s200x200/252231_1002029915278_1941483569_n.jpg";
-    String filename;
     private Target target = new Target() {
         @Override
         public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-
-                    File file = new File(filename);
+                    Log.d("PHOTO TEST", "trying to save photo from fb into storage");
+                    File file = new File(getStoragePathToPhoto(FACEBOOK_PHOTO_NAME));
                     try {
-                        file.createNewFile();
-                        FileOutputStream ostream = new FileOutputStream(file);
-                        bitmap.compress(Bitmap.CompressFormat.JPEG, 75, ostream);
-                        ostream.close();
-                        Log.d("PHOTO SAVED", "PHOTO SAVED");
+                        // file.createNewFile();
+                        FileOutputStream outputStream = new FileOutputStream(file);
+                        bitmap.compress(Bitmap.CompressFormat.JPEG, 75, outputStream);
+                        outputStream.close();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -50,28 +51,13 @@ public class FacebookPhotoTest extends Fragment {
         }
 
         @Override
-        public void onBitmapFailed(Drawable errorDrawable) {
+        public void onBitmapFailed(Drawable drawable) {
         }
 
         @Override
-        public void onPrepareLoad(Drawable placeHolderDrawable) {
-            if (placeHolderDrawable != null) {
-            }
+        public void onPrepareLoad(Drawable drawable) {
         }
     };
-
-    public static Bitmap loadFromFile(String filename) {
-        try {
-            File f = new File(filename);
-            if (!f.exists()) {
-                return null;
-            }
-            Bitmap tmp = BitmapFactory.decodeFile(filename);
-            return tmp;
-        } catch (Exception e) {
-            return null;
-        }
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -83,40 +69,74 @@ public class FacebookPhotoTest extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        Log.d("PHOTO SAVED", "ON CREATE");
         View rootView = inflater.inflate(R.layout.facebook_photo, container, false);
+        initViews(rootView);
+        new DownloadFilesTask().execute();
+
+        return rootView;
+    }
+
+    private void initViews(View rootView) {
         imageView = (ImageView) rootView.findViewById(R.id.image);
+        progressBar = (ProgressBar) rootView.findViewById(R.id.loading);
+    }
 
-        filename = Environment.getExternalStorageDirectory().getPath() + "/actress_wallpaper.jpg";
+    private void loadPhotoInto(final ImageView imageView, final ProgressBar progressBar) {
+        File file = new File(getStoragePathToPhoto(FACEBOOK_PHOTO_NAME));
+        Picasso.with(context).load(file).into(imageView, new Callback.EmptyCallback() {
+            @Override
+            public void onSuccess() {
+                Log.d("PHOTO TEST", "user photo loaded from storage");
+                progressBar.setVisibility(View.GONE);
+            }
 
-        /*
+            @Override
+            public void onError() {
+                Log.e("PHOTO TEST", "error (probably no photo on storage)");
+                downloadPhoto(imageView, progressBar);
+            }
+        });
+    }
+
+    private void downloadPhoto(final ImageView imageView, final ProgressBar progressBar) {
+        Log.d("PHOTO TEST", "downloading new photo from fb");
+        final String photoURL = buildFbPhotoURL(FACEBOOK_USER_ID);
+        Log.d("PHOTO TEST", "path to fb photo: " + photoURL);
+
         Picasso.with(context)
-                .load(currentUrl)
+                .load(photoURL)
                 .into(imageView, new Callback.EmptyCallback() {
                     @Override
                     public void onSuccess() {
+                        Log.d("PHOTO TEST", "user photo loaded from fb");
                         progressBar.setVisibility(View.GONE);
+                        Picasso.with(context).load(photoURL).into(target);
                     }
 
                     @Override
                     public void onError() {
+                        Log.e("PHOTO TEST", "error downloading photo from fb");
                         progressBar.setVisibility(View.GONE);
                     }
                 });
+    }
 
-        Picasso.with(context)
-                .load(currentUrl)
-                .into(target);
-                */
-        //Bitmap bmp = loadFromFile(filename);
+    private String buildFbPhotoURL(String userId) {
+        return FACEBOOK_GRAPH_URL_START +
+                userId +
+                FACEBOOK_GRAPH_URL_END +
+                FACEBOOK_USER_PHOTO_SIZE;
+    }
 
-        //BitmapFactory.Options options = new BitmapFactory.Options();
-        //options.inSampleSize = 2;
-        //Bitmap bm = BitmapFactory.decodeFile(filename, options);
-        //imageView.setImageBitmap(bm);
-        File file = new File(filename);
-        Picasso.with(context).load(file).into(imageView);
+    private String getStoragePathToPhoto(String photoName) {
+        return Environment.getExternalStorageDirectory().getPath() + "/" + photoName + ".jpg";
+    }
 
-        return rootView;
+    private class DownloadFilesTask extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected Void doInBackground(Void... params) {
+            loadPhotoInto(imageView, progressBar);
+            return null;
+        }
     }
 }

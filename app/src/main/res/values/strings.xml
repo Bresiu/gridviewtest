@@ -326,6 +326,7 @@
     <string name="clothes_type_medium">medium</string>
     <string name="clothes_type_heavy">heavy</string>
     <string name="clothes_type">clothes type</string>
+    <string name="image_description">facebook photo</string>
 
 
 </resources>
