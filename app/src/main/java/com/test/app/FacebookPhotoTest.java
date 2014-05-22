@@ -27,9 +27,11 @@ public class FacebookPhotoTest extends Fragment {
     private static final String FACEBOOK_GRAPH_URL_END = "/picture?height=";
     private static final int FACEBOOK_USER_PHOTO_SIZE = 100;
     private static final String FACEBOOK_PHOTO_NAME = "fbUserPhoto";
+
     Context context;
     ImageView imageView;
     ProgressBar progressBar;
+
     private Target target = new Target() {
         @Override
         public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {
@@ -39,7 +41,6 @@ public class FacebookPhotoTest extends Fragment {
                     Log.d("PHOTO TEST", "trying to save photo from fb into storage");
                     File file = new File(getStoragePathToPhoto(FACEBOOK_PHOTO_NAME));
                     try {
-                        // file.createNewFile();
                         FileOutputStream outputStream = new FileOutputStream(file);
                         bitmap.compress(Bitmap.CompressFormat.JPEG, 75, outputStream);
                         outputStream.close();
@@ -83,28 +84,33 @@ public class FacebookPhotoTest extends Fragment {
 
     private void loadPhotoInto(final ImageView imageView, final ProgressBar progressBar) {
         File file = new File(getStoragePathToPhoto(FACEBOOK_PHOTO_NAME));
-        Picasso.with(context).load(file).into(imageView, new Callback.EmptyCallback() {
-            @Override
-            public void onSuccess() {
-                Log.d("PHOTO TEST", "user photo loaded from storage");
-                progressBar.setVisibility(View.GONE);
-            }
+        Picasso.with(context)
+                .load(file)
+                .resize(FACEBOOK_USER_PHOTO_SIZE, FACEBOOK_USER_PHOTO_SIZE)
+                .centerCrop()
+                .into(imageView, new Callback.EmptyCallback() {
+                    @Override
+                    public void onSuccess() {
+                        Log.d("PHOTO TEST", "user photo loaded from storage");
+                        progressBar.setVisibility(View.GONE);
+                    }
 
-            @Override
-            public void onError() {
-                Log.e("PHOTO TEST", "error (probably no photo on storage)");
-                downloadPhoto(imageView, progressBar);
-            }
-        });
+                    @Override
+                    public void onError() {
+                        Log.e("PHOTO TEST", "error (probably no photo on storage)");
+                        downloadPhoto(imageView, progressBar);
+                    }
+                });
     }
 
     private void downloadPhoto(final ImageView imageView, final ProgressBar progressBar) {
         Log.d("PHOTO TEST", "downloading new photo from fb");
         final String photoURL = buildFbPhotoURL(FACEBOOK_USER_ID);
-        Log.d("PHOTO TEST", "path to fb photo: " + photoURL);
 
         Picasso.with(context)
                 .load(photoURL)
+                .resize(FACEBOOK_USER_PHOTO_SIZE, FACEBOOK_USER_PHOTO_SIZE)
+                .centerCrop()
                 .into(imageView, new Callback.EmptyCallback() {
                     @Override
                     public void onSuccess() {
